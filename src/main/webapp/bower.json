@@ -1,0 +1,22 @@
+{
+  "name": "iSquareServer",
+  "version": "0.0.1",
+  "homepage": "https://github.com/iSquareIO/iSquareServer",
+  "authors": [
+    "Vasiliy Malakhov <mvamgc@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "rxjs": "~4.0.0"
+  }
+}

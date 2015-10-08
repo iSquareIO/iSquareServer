@@ -3,19 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+  <script src="bower_components/rxjs/dist/rx.lite.js"></script>
+  <script src="streaming.js"></script>
 </head>
 <body>
-server
-<br/>
-M1
 
-<script>
-    var eventSource = new EventSource("sse");
-    eventSource.onmessage = function(event)
-    {
-        window.console.info("Server-Sent Event: " + event.data);
-    };
-    console.log("----")
-</script>
 </body>
 </html>
