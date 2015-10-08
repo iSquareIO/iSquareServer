@@ -8,9 +8,18 @@
         <servlet-class>io.iosquare.web.EventSourceServlet</servlet-class>
         <async-supported>true</async-supported>
     </servlet>
+    <servlet>
+        <servlet-name>DataReceiverServlet</servlet-name>
+        <servlet-class>io.iosquare.web.DataReceiverServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>eventsource</servlet-name>
         <url-pattern>/sse</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>DataReceiverServlet</servlet-name>
+        <url-pattern>/datareceiver</url-pattern>
     </servlet-mapping>
 
 </web-app>

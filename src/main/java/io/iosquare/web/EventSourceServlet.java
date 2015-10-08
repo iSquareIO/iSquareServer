@@ -10,6 +10,10 @@ import javax.servlet.http.HttpServletRequest;
 public class EventSourceServlet extends org.eclipse.jetty.servlets.EventSourceServlet {
     @Override
     protected EventSource newEventSource(HttpServletRequest request) {
-        return new DataSource();
+//        return new DataSource();
+
+        DataSourceProxy ds = new DataSourceProxy();
+        DataCollector.addClient(ds);
+        return ds;
     }
 }
