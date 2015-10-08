@@ -18,11 +18,15 @@ public class DataSource implements EventSource {
     public DataSource() {
         timer = new Timer();
         timerTask = new TimerTask() {
+            private DataGenerator generator = new DataGenerator();
             @Override
             public void run() {
                 if(emitter != null) {
 //                    String data = "test data: " + new Date() +"\n";
-                    String data = "{\"timestamp\":\"2015-10-08T17:52:16.729Z\",\"columns\":[\"Toronto\",\"New York\",\"Kiev\"],\"data\":[[58,28,51],[0,2,0]]}\n";
+
+//                    System.out.println("Sample data: "+generator.getData());
+//                    String data = "{\"timestamp\":\"2015-10-08T17:52:16.729Z\",\"columns\":[\"Toronto\",\"New York\",\"Kiev\"],\"data\":[[58,28,51],[0,2,0]]}\n";
+                    String data = generator.getData() + "\n";
                     emitEvent(data);
                     System.out.println("Data is sent: "+data);
                 } else {
